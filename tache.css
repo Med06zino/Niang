@@ -1,13 +1,10 @@
 body {
-    width: 90%;
-    margin: 0;
-    padding: 0;
     font-family: monospace, sans-serif;
 }
 .container {
     display: flex;
     border: 1px solid black;
-    width: 80%;
+    width: 85%;
     margin: auto;
 }
 .row {
@@ -77,12 +74,20 @@ body {
 footer p{
     font-weight: bold;
 }
-@media screen and (min-width:768px) {
+
+
+
+@media only screen and (max-width: 550px) {
     .container {
-        display: block;
+        display: inline-table;
     }
     .row {
-         width: 93%;
+        display: block;
+        width: 70%;
+    }
+    .navbar, .col{
+        display: inline-block;
+        flex-direction: column;
     }
     .cases {
         flex-direction: reverse;
@@ -90,5 +95,8 @@ footer p{
     }
     .case3 {
         flex-wrap: wrap-reverse;
+    }
+    .boxe {
+        display: block;
     }
 }
